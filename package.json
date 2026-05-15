@@ -1,0 +1,15 @@
+{
+  "name": "relay-contract-refresher-license-server",
+  "version": "3.1.0",
+  "description": "RelayTools license server with Stripe billing portal, auto cancel sync and persistent storage.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "stripe": "^18.0.0"
+  }
+}
