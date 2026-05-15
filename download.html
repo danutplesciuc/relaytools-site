@@ -3,35 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Download Relay Tools Pro</title>
+  <title>Add Relay Tools Pro to Chrome</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .download-page{min-height:100vh;display:grid;place-items:center;padding:28px}
+    .download-card{width:min(100%,520px);background:rgba(7,13,28,.88);border:1px solid rgba(96,165,250,.22);border-radius:28px;padding:28px;box-shadow:0 30px 90px rgba(0,0,0,.45)}
+    .download-card .brand{margin-bottom:22px}
+    .download-card h1{font-size:36px;letter-spacing:-.05em;margin:0 0 10px}
+    .download-card p{color:#cbd5e1;line-height:1.6}
+    .field{display:block;margin-top:16px;color:#cbd5e1;font-weight:850}
+    .field input{width:100%;margin-top:8px;background:rgba(2,6,23,.72);border:1px solid rgba(255,255,255,.09);color:white;border-radius:16px;padding:14px;outline:none}
+    .field input:focus{border-color:#60a5fa;box-shadow:0 0 0 4px rgba(37,99,235,.16)}
+    .download-card .btn{width:100%;margin-top:18px}
+    #status{margin-top:14px;color:#86efac;text-align:center;font-weight:900}
+    .back{display:block;text-align:center;margin-top:18px;color:#93c5fd}
+  </style>
 </head>
 <body>
-  <div class="site-bg download-page">
-    <div class="orb orb-blue"></div>
-    <div class="orb orb-purple"></div>
+  <div class="page-glow page-glow-one"></div>
+  <div class="page-glow page-glow-two"></div>
 
-    <main class="download-card">
+  <main class="download-page">
+    <section class="download-card">
       <a class="brand" href="index.html">
-        <span class="brand-icon">↻</span>
-        <span>
-          <strong>Relay Tools Pro</strong>
-          <small>Secure extension download</small>
-        </span>
+        <img src="icon128.png" alt="Relay Tools Pro logo" onerror="this.style.display='none'">
+        <span><strong>Relay Tools</strong><em>PRO</em></span>
       </a>
 
-      <h1>Download Extension</h1>
-      <p>Enter your license email and key. After verification, the extension download will start automatically.</p>
+      <span class="eyebrow">Install extension</span>
+      <h1>Add Relay Tools Pro to Chrome</h1>
+      <p>Enter your license email and key. After verification, the extension download starts.</p>
 
-      <input id="email" type="email" placeholder="Email address">
-      <input id="license" type="text" placeholder="License key">
+      <label class="field">Email
+        <input id="email" type="email" placeholder="your@email.com">
+      </label>
 
-      <button class="btn btn-primary big" onclick="verifyLicense()">Verify License</button>
-      <div class="status" id="status"></div>
+      <label class="field">License Key
+        <input id="license" type="text" placeholder="RCR-XXXX-XXXX-2026">
+      </label>
 
-      <a class="mini-link" href="index.html">Back to homepage</a>
-    </main>
-  </div>
+      <button class="btn btn-primary" onclick="verifyLicense()">Verify license and download</button>
+      <div id="status"></div>
+
+      <div class="important-note" style="margin-top:18px">
+        <strong>Important:</strong> keep your computer and Amazon Relay contract page open for monitoring to work.
+      </div>
+
+      <a class="back" href="index.html">Back to homepage</a>
+    </section>
+  </main>
 
   <script src="download.js"></script>
 </body>
