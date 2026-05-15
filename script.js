@@ -9,11 +9,30 @@ function updateLiveTime() {
 updateLiveTime();
 setInterval(updateLiveTime, 1000);
 
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', event => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (!target) return;
-    event.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+function scrollToSection(id) {
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  const header = document.querySelector('.site-header');
+  const headerHeight = header ? header.offsetHeight : 0;
+  const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 18;
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth'
   });
+}
+
+document.addEventListener('click', function (event) {
+  const link = event.target.closest('a[href^="#"]');
+  if (!link) return;
+
+  const id = link.getAttribute('href').replace('#', '').trim();
+  if (!id) return;
+
+  const target = document.getElementById(id);
+  if (!target) return;
+
+  event.preventDefault();
+  scrollToSection(id);
 });

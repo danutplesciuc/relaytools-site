@@ -190,3 +190,4 @@ section h2{font-size:clamp(30px,3vw,44px);letter-spacing:-.045em;margin:0 0 24px
   .features-grid,.how-grid,.security-strip{grid-template-columns:1fr}
   .footer-grid{flex-direction:column;align-items:flex-start}
 }
+.scroll-anchor{position:relative;top:-105px;height:0;visibility:hidden}
