@@ -1,6 +1,6 @@
 async function verifyLicense(){
 
-    const email = document.getElementById('email').value.trim();
+    const email = document.getElementById('email').value.trim().toLowerCase();
     const key = document.getElementById('license').value.trim();
 
     const status = document.getElementById('status');
@@ -9,34 +9,46 @@ async function verifyLicense(){
 
     try{
 
-        const res = await fetch('https://relaytools.co.uk/api/check-license', {
-            method:'POST',
-            headers:{
-                'Content-Type':'application/json'
-            },
-            body:JSON.stringify({
-                email,
-                license_key:key
-            })
-        });
+        const res = await fetch(
+            'https://relaytools.co.uk/get-license-by-email',
+            {
+                method:'POST',
+                headers:{
+                    'Content-Type':'application/json',
+                    'x-rcr-secret':'RCR_SECURE_2026'
+                },
+                body:JSON.stringify({
+                    email
+                })
+            }
+        );
 
         const data = await res.json();
 
-        if(data.valid){
+        if(
+            data.ok &&
+            data.licenseKey === key
+        ){
 
-            status.innerHTML = 'License valid. Download starting...';
+            status.innerHTML =
+                'License valid. Download starting...';
 
-            window.location.href = '/RelayContractRefresher.zip';
+            window.location.href =
+                '/RelayContractRefresher.zip';
 
         }else{
 
-            status.innerHTML = 'Invalid license';
+            status.innerHTML =
+                'Invalid license';
 
         }
 
     }catch(err){
 
-        status.innerHTML = 'Server error';
+        console.log(err);
+
+        status.innerHTML =
+            'Server error';
 
     }
 
