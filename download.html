@@ -1,75 +1,38 @@
 <!DOCTYPE html>
-<style>
-body{
-    margin:0;
-    background:#050816;
-    color:white;
-    font-family:Arial;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-
-.box{
-    width:420px;
-    background:#0f172a;
-    border:1px solid #1e293b;
-    border-radius:20px;
-    padding:30px;
-}
-
-h1{
-    margin-top:0;
-}
-
-input{
-    width:100%;
-    padding:14px;
-    border-radius:10px;
-    border:none;
-    margin-bottom:15px;
-    background:#111827;
-    color:white;
-    box-sizing:border-box;
-}
-
-button{
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    background:#0ea5e9;
-    color:white;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.status{
-    margin-top:15px;
-    font-size:14px;
-}
-</style>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Relay Tools Pro</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="site-bg download-page">
+    <div class="orb orb-blue"></div>
+    <div class="orb orb-purple"></div>
 
-<div class="box">
+    <main class="download-card">
+      <a class="brand" href="index.html">
+        <span class="brand-icon">↻</span>
+        <span>
+          <strong>Relay Tools Pro</strong>
+          <small>Secure extension download</small>
+        </span>
+      </a>
 
-<h1>Download Extension</h1>
+      <h1>Download Extension</h1>
+      <p>Enter your license email and key. After verification, the extension download will start automatically.</p>
 
-<input id="email" placeholder="Email">
-<input id="license" placeholder="License Key">
+      <input id="email" type="email" placeholder="Email address">
+      <input id="license" type="text" placeholder="License key">
 
-<button onclick="verifyLicense()">
-Verify License
-</button>
+      <button class="btn btn-primary big" onclick="verifyLicense()">Verify License</button>
+      <div class="status" id="status"></div>
 
-<div class="status" id="status"></div>
+      <a class="mini-link" href="index.html">Back to homepage</a>
+    </main>
+  </div>
 
-</div>
-
-<script src="download.js"></script>
-
+  <script src="download.js"></script>
 </body>
 </html>

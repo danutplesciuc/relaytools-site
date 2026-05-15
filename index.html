@@ -3,107 +3,198 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Relay Tools</title>
+  <title>Relay Tools Pro | Amazon Relay Live Contract Monitoring</title>
+  <meta name="description" content="Relay Tools Pro monitors Amazon Relay contracts, price changes and new contract activity in real time.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="site-bg">
+    <div class="orb orb-blue"></div>
+    <div class="orb orb-purple"></div>
 
-<header>
-  <div class="container nav">
-    <div>
-      <h1>Relay Tools</h1>
-      <p>Amazon Relay Contract Refresher</p>
-    </div>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="Relay Tools Pro home">
+          <span class="brand-icon">↻</span>
+          <span>
+            <strong>Relay Tools Pro</strong>
+            <small>Amazon Relay intelligence</small>
+          </span>
+        </a>
 
-    <a href="#pricing" class="btn">Start Free Trial</a>
+        <nav class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#live-preview">Live monitor</a>
+          <a href="#pricing">Pricing</a>
+          <a href="support.html">Support</a>
+        </nav>
+
+        <a href="download.html" class="btn btn-primary">Download</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="badge"><span></span> LIVE CONTRACT DETECTION</div>
+            <h1>Real-time Amazon Relay monitoring for serious carriers.</h1>
+            <p class="hero-text">Track new contracts, price increases, price drops and global changes with a premium floating monitor built for Amazon Relay operators.</p>
+
+            <div class="hero-actions">
+              <a href="download.html" class="btn btn-primary big">Start 7 Day Free Trial</a>
+              <a href="#live-preview" class="btn btn-ghost big">View Live Preview</a>
+            </div>
+
+            <div class="trust-row">
+              <div><strong>15–25s</strong><span>smart refresh range</span></div>
+              <div><strong>Telegram</strong><span>instant alerts</span></div>
+              <div><strong>Pro</strong><span>license control</span></div>
+            </div>
+          </div>
+
+          <div class="monitor-shell" id="live-preview">
+            <div class="monitor-card">
+              <div class="monitor-header">
+                <div class="monitor-brand">
+                  <div class="monitor-icon">↻</div>
+                  <div>
+                    <strong>Relay Tools Pro</strong>
+                    <span>Live control monitor</span>
+                  </div>
+                </div>
+                <div class="live-chip"><span></span> LIVE</div>
+              </div>
+
+              <div class="stats-grid">
+                <div><span>Tracked</span><strong id="trackedCount">42</strong></div>
+                <div><span>Changes</span><strong id="changeCount">8</strong></div>
+                <div><span>Next</span><strong id="nextScan">17s</strong></div>
+              </div>
+
+              <div class="button-grid">
+                <button class="stop-btn">STOP</button>
+                <button class="start-btn">START</button>
+              </div>
+
+              <div class="license-card">License ACTIVE • PRO</div>
+
+              <div class="countdown-card">
+                <strong id="scanText">Click refresh in 17s • 15–25s</strong>
+                <span>No change • system ready</span>
+              </div>
+
+              <div class="events-card">
+                <div class="events-title">Live Events</div>
+                <div class="event green"><strong>+£42 Price Up</strong><span>XBH7 • LTN7 • 19:05</span></div>
+                <div class="event blue"><strong>New contract detected</strong><span>Appeared on page 7</span></div>
+                <div class="event purple"><strong>Global price event</strong><span>All contracts changed together</span></div>
+              </div>
+            </div>
+
+            <div class="toast-demo">
+              <strong>🔥 PRICE CHANGE DETECTED</strong>
+              <span>+£42 increase on monitored contract</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features">
+        <div class="container">
+          <div class="section-heading">
+            <span class="badge subtle"><span></span> BUILT FOR RELAY</span>
+            <h2>Everything you need when contracts move fast.</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-box">
+              <div class="feature-icon green">£</div>
+              <h3>Price change alerts</h3>
+              <p>See price increases and drops instantly, with clear green and red highlights on the Relay page.</p>
+            </article>
+
+            <article class="feature-box">
+              <div class="feature-icon blue">+</div>
+              <h3>New contract detection</h3>
+              <p>Detect new contract rows and receive alerts before you miss a valuable route.</p>
+            </article>
+
+            <article class="feature-box">
+              <div class="feature-icon purple">⚡</div>
+              <h3>Smart refresh engine</h3>
+              <p>Use a configurable refresh range so the page keeps scanning without manual clicking.</p>
+            </article>
+
+            <article class="feature-box">
+              <div class="feature-icon red">●</div>
+              <h3>Auto stop after change</h3>
+              <p>Stop automatically after a detection so you can review the exact contract safely.</p>
+            </article>
+
+            <article class="feature-box">
+              <div class="feature-icon cyan">✉</div>
+              <h3>Telegram notifications</h3>
+              <p>Send important contract activity to Telegram while your dashboard keeps running.</p>
+            </article>
+
+            <article class="feature-box">
+              <div class="feature-icon amber">↻</div>
+              <h3>Baseline reset</h3>
+              <p>Save the current page as clean and only alert when the next real change appears.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="timeline-section">
+        <div class="container split-card">
+          <div>
+            <span class="badge subtle"><span></span> CONTRACT INTELLIGENCE</span>
+            <h2>Turn Relay activity into useful patterns.</h2>
+            <p>Track the events that matter, price moves, removed routes, new lanes and global updates. Over time, this helps you learn when the market moves.</p>
+          </div>
+          <div class="timeline">
+            <div><strong>19:05</strong><span>Global price event detected</span></div>
+            <div><strong>19:06</strong><span>Telegram alert delivered</span></div>
+            <div><strong>19:07</strong><span>Monitoring auto-stopped</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="pricing">
+        <div class="container pricing-box">
+          <div class="pricing-top">
+            <span class="badge"><span></span> MOST POPULAR</span>
+            <div class="live-chip"><span></span> PRO ACTIVE</div>
+          </div>
+          <h2>Relay Tools Pro</h2>
+          <div class="price">£49.99<span>/month</span></div>
+          <p>Start with a 7 day free trial. Cancel anytime through Stripe.</p>
+          <a href="download.html" class="btn btn-primary big">Start Free Trial</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer">
+        <div class="brand footer-brand">
+          <span class="brand-icon">↻</span>
+          <span>
+            <strong>Relay Tools Pro</strong>
+            <small>Professional tools for Amazon Relay operators.</small>
+          </span>
+        </div>
+        <div class="footer-links">
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="delete-data.html">Delete Data</a>
+          <a href="mailto:support@relaytools.co.uk">Support</a>
+        </div>
+      </div>
+    </footer>
   </div>
-</header>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="badge">LIVE CONTRACT ALERTS</span>
-
-      <h2>Never miss another Amazon Relay contract.</h2>
-
-      <p>
-        Relay Contract Refresher monitors Amazon Relay pages in real time and instantly alerts you when new contracts appear.
-      </p>
-
-      <div class="buttons">
-        <a href="#pricing" class="btn big">Start 7 Day Free Trial</a>
-        <a href="#features" class="btn-outline big">Explore Features</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Relay Contract Refresher</h3>
-      <p>Extension Dashboard</p>
-
-      <div class="alert-card">
-        <strong>New Contract Detected</strong>
-        <span>Page 7</span>
-      </div>
-
-      <div class="alert-card">
-        <strong>Auto Refresh Enabled</strong>
-      </div>
-
-      <div class="alert-card">
-        <strong>License Status: PRO</strong>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="features" class="features">
-  <div class="container">
-    <h2>Powerful features built for Relay.</h2>
-
-    <div class="grid">
-      <div class="feature-box">
-        <h3>Instant Alerts</h3>
-        <p>Get notified the moment a new contract appears.</p>
-      </div>
-
-      <div class="feature-box">
-        <h3>Page Detection</h3>
-        <p>See exactly on which page the contract appeared.</p>
-      </div>
-
-      <div class="feature-box">
-        <h3>Smart Refresh</h3>
-        <p>Optimized refresh system for Amazon Relay.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="pricing" class="pricing">
-  <div class="container pricing-box">
-    <span class="badge">MOST POPULAR</span>
-
-    <h2>Relay Contract Refresher Pro</h2>
-
-    <div class="price">£49.99<span>/month</span></div>
-
-    <p>Start with a 7 day free trial. Cancel anytime.</p>
-
-    <a href="https://relaytools.co.uk" class="btn big">Start 7 Day Free Trial</a>
-  </div>
-</section>
-
-<footer>
-  <div class="container footer">
-    <div>
-      <h3>Relay Tools</h3>
-      <p>Professional tools for Amazon Relay operators.</p>
-    </div>
-
-    <a href="mailto:support@relaytools.co.uk" class="btn">Support</a>
-  </div>
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
