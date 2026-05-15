@@ -10,7 +10,7 @@ async function verifyLicense(){
     try{
 
         const res = await fetch(
-            'https://relaytools.co.uk/get-license-by-email',
+            'https://relay-license-server.onrender.com/get-license-by-email',
             {
                 method:'POST',
                 headers:{
