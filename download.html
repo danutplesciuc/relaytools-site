@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<style>
+body{
+    margin:0;
+    background:#050816;
+    color:white;
+    font-family:Arial;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    width:420px;
+    background:#0f172a;
+    border:1px solid #1e293b;
+    border-radius:20px;
+    padding:30px;
+}
+
+h1{
+    margin-top:0;
+}
+
+input{
+    width:100%;
+    padding:14px;
+    border-radius:10px;
+    border:none;
+    margin-bottom:15px;
+    background:#111827;
+    color:white;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#0ea5e9;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.status{
+    margin-top:15px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>Download Extension</h1>
+
+<input id="email" placeholder="Email">
+<input id="license" placeholder="License Key">
+
+<button onclick="verifyLicense()">
+Verify License
+</button>
+
+<div class="status" id="status"></div>
+
+</div>
+
+<script src="download.js"></script>
+
+</body>
+</html>
